@@ -13,11 +13,16 @@ my @Map_Pisteurs;
 #Tableau consultable par le monstre abec sa postion, les traces des pisteurs et leurs positions
 my @Map_Monstre;
 
+
 my $pis = Pisteur->new(5,6);
 
-Init_Tableau(@Map_Pisteurs);
-Init_Tableau(@Map_Monstre);
+Init_Tableau(\@Map_Pisteurs);
+Init_Tableau(\@Map_Monstre);
 
-Affiche_Tableau(@Map_Pisteurs);
+Affiche_Tableau(\@Map_Pisteurs);
+
+print ($pis->getPx()."\n");
+
+$pis->setPx(8);
 
 print ($pis->getPx()."\n");

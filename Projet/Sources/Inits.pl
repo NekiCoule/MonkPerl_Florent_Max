@@ -11,14 +11,14 @@ sub Init_Tableau {
 		for( my $j=0; $j<31; $j+=1 ){
 			#toute la première et la dernière ligne est remplie d'*
 			if( $i == 0 || $i == 15 ){
-				$t[$i][$j] = "*";
+				$t[$i][$j] = -1;
 			}
 			#toute la première et la dernière colone est remplie d'*
 			elsif( $j == 0 || $j == 30 ){
-				$t[$i][$j] = "*";
+				$t[$i][$j] = -1;
 			}
 			else{
-				$t[$i][$j] = "0";
+				$t[$i][$j] = 0;
 			}		
 		}
 	}	

@@ -32,9 +32,8 @@ sub getEtat {
 	my ($this) = @_;
 	return $this->{ETAT};	
 }
-}
 
-sub SetPx {
+sub setPx {
 	my ($this,$mx) = @_;
 	$this->{PX} = $mx;	
 }
@@ -52,8 +51,23 @@ sub setEtat {
 #Entrée : Tableau Pisteurs / Monstre
 #Sortie : Rien / Traces / Monstre (tir doit être appelé / mort si position est la même que le pisteur)
 sub rapport {
-	my ($this,$mTab,$mMonster) = @_;
-	#A terminer
+	my ($this,$mTab) = @_;	
+	my $mx = $this->{PX};
+	my $my = $this->{PY};
+	my $case = 1;
+	for( my $i=-1; $i<2; $i+=1 ){
+		for( my $j=-1; $j<2; $j+=1 ){
+			if ( ${$mTab}[$mx+$i][$my+$j]==0) {
+				
+			} elsif ( ${$mTab}[$mx+$i][$my+$j]>0 && ${$mTab}[$mx+$i][$my+$j]<16 ) {
+				
+			} elsif ( ${$mTab}[$mx+$i][$my+$j]==16) {
+			
+			} elsif ( ${$mTab}[$mx+$i][$my+$j]== -1) {
+				
+			}	
+		}
+	}
 }
 #Destructeur 
 
