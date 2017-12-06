@@ -9,8 +9,7 @@ sub new {
 	bless($this, $class);
 	$this->{PX} = $px;
 	$this->{PY} = $py;
-	$this->{ETAT} = "Vivant";
-	$this->{TRACES}= $traces;
+	$this->{ETAT} = 1;
 	$nbPisteurs++;
 	return $this;
 }
@@ -33,9 +32,6 @@ sub getEtat {
 	my ($this) = @_;
 	return $this->{ETAT};	
 }
-sub getTraces {
-	my ($this) = @_;
-	return $this->{TRACES};	
 }
 
 sub SetPx {
@@ -50,18 +46,8 @@ sub setEtat {
 	my ($this,$mEtat) = @_;
 	$this->{ETAT} = $mEtat;	
 }
-sub setTraces {
-	my ($this,$mTraces) = @_;
-	$this->{TRACES} = $mTraces;	
-}
 
-#But : Faire vieillir les traces du pisteur
-#Entrée : Tableau Pisteurs / Traces Pisteur
-#Sortie : Traces vieillit ou disparu
-sub rapport {
-	my ($this,$myTab) = @_;
-	#A terminer
-}
+
 #But : Vérifier si des traces du monstres ou le monstre sont autour du pisteur
 #Entrée : Tableau Pisteurs / Monstre
 #Sortie : Rien / Traces / Monstre (tir doit être appelé / mort si position est la même que le pisteur)
